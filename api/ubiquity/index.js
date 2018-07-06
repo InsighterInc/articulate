@@ -5,11 +5,13 @@ const Boom = require('boom');
 const Facebook = require('./services/facebook')
 const Twilio = require('./services/twilio')
 const Slack = require('./services/slack-rtm')
+const Mattermost = require('./services/mattermost')
 
 const ubiquity = {
   facebook: Facebook,
   twilio: Twilio,
-  slack: Slack
+  slack: Slack,
+  matterMost: Mattermost
 }
 
 exports.register = function (server, options, next) {
